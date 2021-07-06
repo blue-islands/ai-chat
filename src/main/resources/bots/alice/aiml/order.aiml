@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<aiml version="1.0">
+
+    <category>
+        <pattern>Where is my order</pattern>
+        <template>Can you please provide the order number?</template>
+    </category>
+
+    <category>
+        <pattern><set>number</set></pattern>
+        <that>Can you please provide the order number</that>
+        <template>Looking for your order</template>
+    </category>
+
+</aiml>

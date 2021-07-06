@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<aiml version="1.0">
+    <category>
+        <pattern>HELLO</pattern>
+        <template>
+            <random>
+                <li>Hi!</li>
+                <li>Hello!</li>
+                <li>Hello, how are you?</li>
+            </random>
+        </template>
+    </category>
+
+   <category>
+        <pattern>HI</pattern>
+        <template>
+            <random>
+                <li>Hi!</li>
+                <li>Hello!</li>
+                <li>Hello, how are you?</li>
+            </random>
+        </template>
+    </category>
+
+    <category>
+        <pattern>HOW ARE YOU</pattern>
+        <template>Doing great, and you?</template>
+    </category>
+
+    <category>
+        <pattern>こんにちは</pattern>
+        <template>こんにちは</template>
+    </category>
+
+    <category>
+        <pattern> * GOOD AND YOU * </pattern>
+        <template>Me too! How can I help you?</template>
+    </category>
+
+    <category>
+        <pattern> * NOT GOOD * </pattern>
+        <template>Sorry to hear about that! How can I help you?</template>
+    </category>
+
+    <category>
+        <pattern> * HELP * </pattern>
+        <template>How can I help you?</template>
+    </category>
+
+    <category>
+        <pattern>PROPERTIES</pattern>
+        <template>
+            <bot name="name"/>
+            <bot name="age"/>
+            <bot name="height"/>
+        </template>
+    </category>
+
+    <category>
+        <pattern><set>number</set></pattern>
+        <template>Great! a number!</template>
+    </category>
+
+    <category>
+        <pattern>Thanks</pattern>
+        <template>You're welcome! Do you have any more questions?</template>
+    </category>
+
+    <category>
+        <pattern> YES </pattern>
+        <that> Do you have any more questions </that>
+        <template>How can I help you?</template>
+    </category>
+
+    <category>
+        <pattern> NO </pattern>
+        <that> Do you have any more questions </that>
+        <template>Glad to see you! Bye!</template>
+    </category>
+
+</aiml>
