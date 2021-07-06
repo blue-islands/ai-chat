@@ -15,20 +15,20 @@ public class Test {
         final var tooMuchRecursion = "AIMLの再帰が多すぎます。";
         final var tooMuchLooping = "AIMLのループが多すぎます。";
 
-        final var lang = LanguageConfiguration.builder();
-        lang.defaultResponse(defaultResponse);
-        lang.errorResponse(errorResponse);
-        lang.scheduleError(scheduleError);
-        lang.systemFailed(systemFailed);
-        lang.templateFailed(templateFailed);
-        lang.tooMuchRecursion(tooMuchRecursion);
-        lang.tooMuchLooping(tooMuchLooping);
+        final var language = LanguageConfiguration.builder()
+                .defaultResponse(defaultResponse)
+                .errorResponse(errorResponse)
+                .scheduleError(scheduleError)
+                .systemFailed(systemFailed)
+                .templateFailed(templateFailed)
+                .tooMuchRecursion(tooMuchRecursion)
+                .tooMuchLooping(tooMuchLooping).build();
 
         final var bot = new Bot(BotConfiguration.builder()
                 .name("alice")
                 .path("src/main/resources")
                 .jpTokenize(true)
-                .language(lang.build())
+                .language(language)
                 .build());
 
         final var chatSession = new Chat(bot);
