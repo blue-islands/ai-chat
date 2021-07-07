@@ -2,14 +2,14 @@
 <aiml version="1.0">
 
     <category>
-        <pattern>Where is my order</pattern>
-        <template>Can you please provide the order number?</template>
+        <pattern>注文はどこにありますか</pattern>
+        <template>注文番号を教えていただけますか？</template>
     </category>
 
     <category>
         <pattern><set>number</set></pattern>
-        <that>Can you please provide the order number</that>
-        <template>Looking for your order</template>
+        <that>注文番号を教えていただけますか</that>
+        <template>注文を探しています</template>
     </category>
 
 </aiml>

@@ -1,30 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <aiml version="1.0">
     <category>
-        <pattern>HELLO</pattern>
+        <pattern>こんにちは</pattern>
         <template>
             <random>
-                <li>Hi!</li>
-                <li>Hello!</li>
-                <li>Hello, how are you?</li>
+                <li>こんにちは</li>
+                <li>こんにちは！</li>
+                <li>こんにちは、元気ですか？</li>
             </random>
         </template>
     </category>
 
    <category>
-        <pattern>HI</pattern>
+        <pattern>おつかれ</pattern>
         <template>
             <random>
-                <li>Hi!</li>
-                <li>Hello!</li>
-                <li>Hello, how are you?</li>
+                <li>お疲れ！</li>
+                <li>お疲れさま！</li>
+                <li>お疲れさま、元気ですか？</li>
             </random>
         </template>
     </category>
 
     <category>
-        <pattern>HOW ARE YOU</pattern>
-        <template>Doing great, and you?</template>
+        <pattern>元気ですか</pattern>
+        <template>元気ですよ。あなたはどうですか？</template>
     </category>
 
     <category>
