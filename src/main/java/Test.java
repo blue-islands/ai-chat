@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 import org.goldrenard.jb.configuration.BotConfiguration;
 import org.goldrenard.jb.configuration.LanguageConfiguration;
 import org.goldrenard.jb.core.Bot;
@@ -32,8 +34,22 @@ public class Test {
                 .build());
 
         final var chatSession = new Chat(bot);
-        final var answer = chatSession.multisentenceRespond("テスト");
-        System.out.println(answer);
+
+        final var scanner = new Scanner(System.in); // Scannerで初期化
+
+        while (true) {
+            System.out.println("私:何か話しかけてね。");
+            final var text = scanner.next(); // 文字列の入力の受け取り
+            System.out.println("貴方:" + text);
+            if (text.contains("バイバイ")) {
+                scanner.close();
+                return;
+            }
+
+            final var answer = chatSession.multisentenceRespond(text);
+            System.out.println("私:" + answer);
+        }
+
     }
 
 }
