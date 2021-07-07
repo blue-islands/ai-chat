@@ -1,7 +1,9 @@
 # AIチャット
 
 JavaでAIMLのプログラムを実行して、対話ができるようにするための備忘録
+
 ライブラリはGoldRenardの[Program-JB](https://github.com/GoldRenard/Program-JB)を利用しています。
+
 ※ これはAIML2.0リファレンス実装です。AIMLは、チャットボットや、ALICE、Mitsuku、English Tutor、The Professor、SUPERなどのモバイル仮想アシスタントを作成するために広く採用されている標準です。
 
 ## 使い方
