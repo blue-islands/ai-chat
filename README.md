@@ -1,6 +1,6 @@
 # AIチャット
 
-JavaでAIMLのプログラムを実行して、対話ができるようにするための備忘録
+JavaでAIMLのプログラムを実行して、対話ができるようにするための備忘録です。
 
 ライブラリはGoldRenardの[Program-JB](https://github.com/GoldRenard/Program-JB)を利用しています。
 
