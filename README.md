@@ -48,7 +48,7 @@ Mavenの利用ができます。
 </dependency>
 ```
 
-2021/12/18 更新<br>
+**2021/12/18 更新**<br>
 [Program-JB](https://github.com/GoldRenard/Program-JB)については、JCenterのリポジトリで公開されていましたが、2022年2月1日で廃止になります。
 その為、JCenterで公開されていたJarをローカルに移動しています。 
 
