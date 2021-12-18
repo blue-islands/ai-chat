@@ -10,26 +10,41 @@ JavaでAIMLのプログラムを実行して、対話ができるようにする
 
 Mavenの利用ができます。
 ```xml
-<repository>
-    <id>jcenter</id>
-    <name>jcenter-bintray</name>
-    <url>http://jcenter.bintray.com</url>
-</repository>
-
 <dependency>
     <groupId>org.goldrenard</groupId>
     <artifactId>jb</artifactId>
-    <version>VERSION</version>
+    <version>1.0.13</version>
+    <scope>system</scope>
+    <systemPath>${project.basedir}/libs/jb-1.0.13.jar</systemPath>
+</dependency>
+<dependency>
+    <groupId>net.reduls.sanmoku</groupId>
+    <artifactId>sanmoku</artifactId>
+    <version>0.0.5</version>
+    <scope>system</scope>
+    <systemPath>${project.basedir}/libs/sanmoku-0.0.5.jar</systemPath>
+</dependency>
+<dependency>
+    <groupId>net.reduls.sanmoku</groupId>
+    <artifactId>sanmoku-feature-ex</artifactId>
+    <version>0.0.1</version>
+    <scope>system</scope>
+    <systemPath>${project.basedir}/libs/sanmoku-feature-ex-0.0.1.jar</systemPath>
+</dependency>
+<dependency>
+    <groupId>org.apache.commons</groupId>
+    <artifactId>commons-lang3</artifactId>
+    <version>3.12.0</version>
 </dependency>
 <dependency>
     <groupId>org.slf4j</groupId>
     <artifactId>slf4j-api</artifactId>
-    <version>VERSION</version>
+    <version>1.7.31</version>
 </dependency>
 <dependency>
     <groupId>org.slf4j</groupId>
     <artifactId>slf4j-simple</artifactId>
-    <version>VERSION</version>
+    <version>1.7.31</version>
 </dependency>
 ```
 
