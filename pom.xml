@@ -44,27 +44,17 @@
             </plugin>
         </plugins>
     </build>
+    <repositories>
+        <repository>
+            <id>jitpack.io</id>
+            <url>https://jitpack.io</url>
+        </repository>
+    </repositories>
     <dependencies>
         <dependency>
-            <groupId>org.goldrenard</groupId>
-            <artifactId>jb</artifactId>
-            <version>1.0.13</version>
-            <scope>system</scope>
-            <systemPath>${project.basedir}/libs/jb-1.0.13.jar</systemPath>
-        </dependency>
-        <dependency>
-            <groupId>net.reduls.sanmoku</groupId>
-            <artifactId>sanmoku</artifactId>
-            <version>0.0.5</version>
-            <scope>system</scope>
-            <systemPath>${project.basedir}/libs/sanmoku-0.0.5.jar</systemPath>
-        </dependency>
-        <dependency>
-            <groupId>net.reduls.sanmoku</groupId>
-            <artifactId>sanmoku-feature-ex</artifactId>
-            <version>0.0.1</version>
-            <scope>system</scope>
-            <systemPath>${project.basedir}/libs/sanmoku-feature-ex-0.0.1.jar</systemPath>
+            <groupId>com.github.blue-islands</groupId>
+            <artifactId>Program-JB</artifactId>
+            <version>1.1.0</version>
         </dependency>
         <dependency>
             <groupId>org.apache.commons</groupId>
