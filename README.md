@@ -78,5 +78,59 @@ final var answer = chatSession.multisentenceRespond(text);
 System.out.println(answer);
 ```
 
+Servletなどで利用する場合は以下のような実装になるかと思います。
+
+```java
+import javax.servlet.ServletContext;
+import javax.servlet.http.HttpServlet;
+import org.alicebot.ab.Bot;
+import org.alicebot.ab.BotConfiguration;
+import org.alicebot.ab.Chat;
+import org.alicebot.ab.configuration.LanguageConfiguration;
+
+public class ChatbotServlet extends HttpServlet {
+    private Chat chatSession;
+
+    @Override
+    public void init() {
+        ServletContext context = getServletContext();
+        String rootPath = context.getRealPath("/WEB-INF/classes");
+
+        final var defaultResponse = "私にはその答えがありません。";
+        final var errorResponse = "私の脳に何か問題があります。";
+        final var scheduleError = "そのイベントをスケジュールできません。";
+        final var systemFailed = "システムコマンドの実行に失敗しました。";
+        final var templateFailed = "テンプレートが失敗しました。";
+        final var tooMuchRecursion = "AIMLの再帰が多すぎます。";
+        final var tooMuchLooping = "AIMLのループが多すぎます。";
+
+        final var language = LanguageConfiguration.builder()
+                .defaultResponse(defaultResponse)
+                .errorResponse(errorResponse)
+                .scheduleError(scheduleError)
+                .systemFailed(systemFailed)
+                .templateFailed(templateFailed)
+                .tooMuchRecursion(tooMuchRecursion)
+                .tooMuchLooping(tooMuchLooping).build();
+
+        final var bot = new Bot(BotConfiguration.builder()
+                .name("alice")
+                .path(rootPath)
+                .jpTokenize(true)
+                .language(language)
+                .build());
+
+        chatSession = new Chat(bot);
+    }
+
+    @Override
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        String text = req.getParameter("text");
+        String answer = chatSession.multisentenceRespond(text);
+        resp.getWriter().write(answer);
+    }
+}
+```
+
 ## AIML2.0リファレンス
 https://note.com/npaka/n/n2c653844af74
